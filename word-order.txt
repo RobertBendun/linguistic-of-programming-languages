@@ -1,0 +1,55 @@
+= Word Order
+
+[cols="1,4,2,2,3,3",options="header"]
+|===
+| Word order
+| Example (English)
+| Example (programming)
+| Example (LISP-like)
+| Natural languages
+| Programming languages
+
+| SVO
+| Cows eat grass
+| `server.listen(address)` or `server listen: address`
+| `(xs push 2 3 4)`
+| Chinese, English, Polish
+| Java, Smalltalk
+
+| SOV
+| Cows grass eat
+| ???
+| `(xs 2 3 4 push)`
+| Latin, Korean, Japanese
+| ???
+
+| VSO
+| Eat cows grass
+| `listen(server, address)` or `listen server address`
+| `(push xs 2 3 4)`
+| Biblical Hebrew, Classical Arabic, Irish, Filipino
+| C, LISP, Fortran, Ada, Intel x86 assembly
+
+| VOS
+| Eat grass cows
+| `movl $5, %eax`
+| `(push 2 3 4 xs)`
+| Car, Fijian
+| AT&T x86 assembly
+
+| OVS
+| Grass eat cows
+| ???
+| `(2 3 4 push xs)`
+| Hixkaryana, Urarina
+| ???
+
+| OSV
+| Grass cows eat
+| `address server listen`
+| `(2 3 4 xs push)`
+| Tobati, Warao
+| Forth, Factor
+
+|===
+

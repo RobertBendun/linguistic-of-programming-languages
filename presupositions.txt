@@ -1,0 +1,4 @@
+= Presupositions
+
+Presupositions are implicit assumptions that given sentance carries. They are established topic in programming languages.
+For example in C statement `a[10] = 20;` implicitly assumes that `10` is a valid index.

@@ -1,0 +1,27 @@
+= Analitic, isolating and synthetic languages
+
+Analitic languages uses specific grammatical words, rather then inflection to express syntatic relations in a sentance.
+Subcategory of analitic languages are isolating languages - languages where there is no word inflection at all.
+Synthetic languages are opposition to isolating languages - words are composition of multiple morphemes.
+
+Almost all programming languages are isolating. One of exceptions is https://www.concatenative.org/wiki/view/Deque[Deque] programming language which attaches `!` as either prefix or suffix to indicate on which end of double-ended queue operation must be performed.
+
+[quote]
+____
+Allow me to present the deque language that I just made up.
+
+1! - Pushes a one to the right of the deque
+
+!1 - Pushes a one to the leftt of the deque
+
+
+add! - Adds the right two numbers of the deque
+
+!add - Adds the left two numbers of the deque
+
+...
+
+3! !5 !2 sub! !add
+
+If applied to an empty deque this will leave the value 4 on the deque.
+____

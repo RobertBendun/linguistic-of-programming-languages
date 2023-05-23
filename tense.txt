@@ -1,0 +1,53 @@
+= Tense
+
+Tense is used to express time reference of a sentance.
+Typical tenses are: past, present and future.
+Similarly in programming languages they may be used to express *when* given statement may execute in relation to other statements and/or other language features.
+
+== Case study: D programming language
+
+For D we can claim 12 tenses, group into four categories: evaluation, lifetimes, contracts and scope guards.
+I don't know any programming language that has more tenses.
+
+=== Evaluation
+
+- `static`, `template`, `mixin` and CTFE provide compile time evaluation
+- lazy function argument evaluation at runtime with `lazy` argument specifier
+- and without any specifier runtime eager evaluation at runtime
+
+=== Object lifetime
+
+- Constructors are called at the begining of object lifetime
+- Destructors are called at the end of object lifetime
+
+=== Contract programming
+
+Allows programmer to express what must happen before, what will hold in future and what will be true always.
+
+- `in` contracts are preconditions, statements that must be true before function body executes
+- `out` contracts are postconditions, statements that must be true after function body finishes executing
+- `assert` may be used to express what must be true in the present
+- `invariant` may be used to express what must be true regardless of time
+
+=== Scope guards
+
+Allow programmer to delay execution of a statement in one of possible futures:
+
+- `scope(exit)` will always execute statements at the end of a scope
+- `scope(success)` will execute statements when no exception was thrown
+- `scope(failure)` will execute statements when exeption was thrown
+
+== Comparing available evaluation tenses in programming languages
+
+[cols="1,2,2,2"]
+|===
+| | Eager evaluation | Lazy evaluation | Lazy or eager
+| Run time only | JavaScript | Haskell | OCaml
+| Run or compile time | Zig | ??? | D
+|===
+
+== Other interesing tenses
+
+- In Common Lisp methods https://lispcookbook.github.io/cl-cookbook/clos.html#method-qualifiers-before-after-around[can be qualified] with when they will be called in relation to primary dispatched method.
+
+
